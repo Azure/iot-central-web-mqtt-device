@@ -64,11 +64,21 @@ You can import in the model by looking at [this information](https://docs.micros
 
 Once you have an Azure IoT Central application and have imported and published the device template you are ready to connect the device.  First thing we need to do is provide information so your device knows where to connect.  You are going to need to fill in the Scope Identity and Group SAS Token.  These can be obtained from the IoT Central application in the Administrator page under the Device connection tab.  
 
-The Scope Identity can be obtained here:
+The Scope Identity can be obtained here and pasted into the browser form:
 
 ![Getting the Scope Identity](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/scopeid.png "Getting the Scope Identity")
 
-The Group SAS Token can be obtained here:
+The Group SAS Token can be obtained here and pasted into the browser form:
 
 ![Getting the Group SAS Token](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/saskey.png "Getting the Group SAS Token")
+
+You should now see that the Device SAS Token has been populated with it's generated value and you are ready to click "Provision and Connect"!
+
+The connection can take a few seconds especially on the first connection so give it a minute to connect if necessary.  Subsequent connections should be much quicker.  You should now see the following screen:
+
+![Connected to IoT Central](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/connected.png "Connected to IoT Central")
+
+Now click the "Start Sending Telemetry" button and telemetry and reported properties will be sent to your IoT Central application.
+
+![Telemetry flowing to IoT Central](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/telemetryflowing.png "Telemetry flowing to IoT Central")
 
