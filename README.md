@@ -1,5 +1,5 @@
 # iot-central-web-mqtt-device
-Create a simple IoT device in a web browser that communicates with Azure IoT Central
+Create a simple IoT device that runs fully contained in the web browser that can communicate with Azure IoT Central over MQTT (using websockets).
 
 
 ## Introduction
