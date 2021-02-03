@@ -87,3 +87,21 @@ In the IoT Central you should be seeing data arrive in the raw data view and if 
 ![Raw telemetry in IoT Central](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/rawtelemetryincentral.png "Raw telemetry in IoT Central")
 
 ![Telemetry in IoT Central](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/telemetryincentral.png "Telemetry in IoT Central")
+
+You can send commands to the device from the IoT Central application like this:
+
+![Commands in IoT Central](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/commands.png "Commands in IoT Central")
+
+You can update the thermostat setting on the device using IoT Central like this:
+
+![Writable properties in IoT Central](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/writableproperty.png "Writable properties in IoT Central")
+
+These will show up in the console window respectively when they arrive at the device:
+
+![Commands from IoT Central on device](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/commandsatdevice.png "Commands from IoT Central on device")
+![Writable properties from IoT Central on device](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/writablepropertyatdevice.png "Writable properties from IoT Central on device")
+
+Finally the complete device twin can be pulled from IoT Central by clicking the "Fetch Full Twin" button and it will be displayed in the console window:
+
+![Full device twin from IoT Central on device](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/fulltwin.png "Full device twin from IoT Central on device")
+
