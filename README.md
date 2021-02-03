@@ -38,6 +38,8 @@ The following should be seen after running the last command
 Listening at http//localhost:8080
 ```
 
+If you see an error check to see if the port 8080 is already in use on your machine and if it is feel free to change the port to a free one by changing the code in server.js on line 23.
+
 Open your browser of choice and go to the URL http//localhost:8080.  You should see the following in you browser:
 
 ![Initial browser screen](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/initialscreen.png "Initial browser screen")
@@ -47,6 +49,11 @@ Open your browser of choice and go to the URL http//localhost:8080.  You should 
 
 The code can obviously be hosted on any web service but in my case I chose to host using an [Azure function](https://azure.microsoft.com/en-us/services/functions/?&ef_id=CjwKCAiAsOmABhAwEiwAEBR0ZmNO6WIwjimRlpY2W-N4U_G99qJHALIQa-hykDyFhzNSz6bJl3x8nRoCVcYQAvD_BwE:G:s&OCID=AID2100131_SEM_CjwKCAiAsOmABhAwEiwAEBR0ZmNO6WIwjimRlpY2W-N4U_G99qJHALIQa-hykDyFhzNSz6bJl3x8nRoCVcYQAvD_BwE:G:s&gclid=CjwKCAiAsOmABhAwEiwAEBR0ZmNO6WIwjimRlpY2W-N4U_G99qJHALIQa-hykDyFhzNSz6bJl3x8nRoCVcYQAvD_BwE) as it is a cost effective way to host infrequently accessed static web pages.
 
-I used [this blog post](https://www.wintellect.com/host-website-azure-functions-node-js-part-1/) to setup my Azure function.  The code needed for the Azure Function can be found in the file [azure-function/index.js]().  
+I used [this blog post](https://www.wintellect.com/host-website-azure-functions-node-js-part-1/) to setup my Azure function.  The code needed for the Azure Function can be found in the file [azure-function/index.js](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/azure-function/index.js).  
+
+You will need to copy the contents of the content directory up to your Azure Function location and also install the needed npm package mime-types.  All this is explained in the blog post.  Once you have followed the insdtructions you should be able to browse to your azure functions URL with https://<your-function-name>.azurewebsites.net/device.html and you should see the following in your browser:
+
+![Initial browser screen](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/initialscreen.png "Initial browser screen")
+
 
 ## Running the sample
