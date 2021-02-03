@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+  }
+  label {
+    display: inline-block;
+    width: 140px;
+    text-align: right
+  }​
+  table,tr,td {
+    padding: 5px;
+    margin: 5px;
+    vertical-align: top;
+  }
+  .right {
+    margin-left: 330px;
+  }
+  .footer {
+    padding:20px;  
+    width: 100%;
+  }
+  .connected {
+    background-color: lightgreen;
+    top:0px;
+    left:0px;
+    position: fixed;
+    width: 100%;
+  }
+  .console {
+    background-color: #1E1E1E; 
+    display: flex;
+    flex-direction: column-reverse; 
+    padding-top: 10px; 
+    border-width: 2px; 
+    height: 400px; 
+    width: 100%; 
+    border-color: black; 
+    border-style: solid; 
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+    resize: vertical;
+    padding-left: 10px;
+  }
+  .transport {
+    padding-top: 50px;
+    padding-bottom: 15px;
+  }
+  .header {
+    display: inline-block;
+    margin-left: 50px;
+    width: 100%;
+  }
+  .string { color: #3B8334; }
+  .number { color: darkorange; }
+  .boolean { color: #6BCFFE; }
+  .null { color: whitesmoke; }
+  .key { color: #C586C0; }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure IoT Central Device Example</title>
+    <!-- This is a development version of Vue.js! -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="lib/paho-mqtt.js"></script>
+    <link rel="stylesheet" href="s.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Device in a browser connecting to IoT Central using MQTT</h1>
+        <div v-show="!connectionInfo.connected">
+            <div class="header">
+                Enter in the connection information for your IoT Central application and device
+            </div>
+            <div class="header">
+                Get the model used by this device <a href="simple_device_model.json" download>here</a>
+                then head to your Azure IoT Central applications by clicking <a href="https://apps.azureiotcentral.com/myapps" target="_blank">here</a>
+            </div>
+            <p>
+                <label for="input Id Scope">Scope Identity</label>
+                <input type="text" id="inputIdScope" size="55" v-model='connectionInfo.scopeId' />
+            </p>
+            <p>
+                <label for="inputDeviceId">Device Identity</label>
+                <input type="text" id="inputDeviceId" size="55" 
+                        v-model='connectionInfo.deviceId'
+                        @change='updateDeviceKey()'>
+
+                <a v-show="viewDpsForm" href="#" @click="refreshDeviceId()">refresh</a>
+            </p>
+            <p>
+                <label for="inputDeviceKey">Device SAS Token</label>
+                <input type="text" id="inputDeviceKey" size="55" 
+                :disabled='disableDeviceKey'
+                v-model='connectionInfo.deviceKey'> <span style="font-size: smaller;">(Auto calculated if Group SAS Token provided)</span>
+            </p>
+            <p>
+                <label for="inputMasterKey">Group SAS Token</label>
+                <input type="text" id="inputMasterKey" size="55" 
+                @change='updateDeviceKey()'
+                v-model='connectionInfo.masterKey'>
+            </p>
+            <p>
+                <label for="inputModelId">Model Identity</label>
+                <input type="text" id="inputModelId" size="55" v-model='connectionInfo.modelId'>
+            </p>
+
+            <div class="right" v-show="!runningProvision">
+                <input type="button" value="Clear Form" @click="clearForm()">
+                <input type="button" id="btnDPS" value="Provision and Connect" @click="provision()">
+            </div>
+        </div>
+        <div v-show="connectionInfo.connected" class="connected">
+            Device <strong>{{ connectionInfo.deviceId }}</strong> connected to IoT Central
+        </div>
+        <div class="transport" v-show="connectionInfo.connected">
+            <button @click="startTelemetry()" v-show="!isTelemetryRunning">Start Sending Telemetry</button>
+            <button @click="stopTelemetry()" v-show="isTelemetryRunning">Stop Sending Telemetry</button>
+            <button @click="fetchTwin()">Fetch Full Twin</button>
+            <button @click="clearConsole()">Clear Console</button>
+        </div>
+        <div id="console" v-show="connectionInfo.connected" class="console">
+            <span v-html="statusConsole"></span>
+        </div>
+    </div>
+    <script src="device.js" type="module"></script>
+</body>
+</html>

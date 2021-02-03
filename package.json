@@ -1,0 +1,16 @@
+{
+  "name": "webmqtt",
+  "version": "1.0.0",
+  "description": "Run an Azure IoT device in a browser using MQTT over websockets",
+  "main": "server.js",
+  "dependencies": {
+    "mime-types": "^2.1.28"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "author": "Ian Hollier",
+  "license": "ISC"
+}

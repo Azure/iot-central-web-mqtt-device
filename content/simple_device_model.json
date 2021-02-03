@@ -1,0 +1,122 @@
+[
+    {
+      "@id": "dtmi:simpleModel:simplesample;1",
+      "@type": "Interface",
+      "contents": [
+        {
+          "@id": "dtmi:simpleModel:simplesample:temp;1",
+          "@type": "Telemetry",
+          "comment": "This is a telemetry element",
+          "description": {
+            "en": "This is a telemetry element"
+          },
+          "displayName": {
+            "en": "Temperature"
+          },
+          "name": "temp",
+          "schema": "double",
+          "unit": "farad"
+        },
+        {
+          "@id": "dtmi:simpleModel:simplesample:Humidity;1",
+          "@type": "Telemetry",
+          "comment": "This is a telemetry element",
+          "description": {
+            "en": "This is a telemetry element"
+          },
+          "displayName": {
+            "en": "Humidity"
+          },
+          "name": "humidity",
+          "schema": "double",
+          "unit": "percent"
+        },
+        {
+          "@id": "dtmi:simpleModel:simplesample:fanspeed;1",
+          "@type": "Property",
+          "comment": "This is a reported property",
+          "description": {
+            "en": "This is a reported property"
+          },
+          "displayName": {
+            "en": "Fan Speed"
+          },
+          "name": "fanspeed",
+          "schema": "integer",
+          "unit": "revolutionPerMinute"
+        },
+        {
+          "@id": "dtmi:simpleModel:simplesample:setTemp;1",
+          "@type": "Property",
+          "comment": "This is a desired property",
+          "description": {
+            "en": "This is a desired property"
+          },
+          "displayName": {
+            "en": "Set Thermostat Temperature"
+          },
+          "name": "setTemp",
+          "schema": "double",
+          "unit": "farad",
+          "writable": true
+        },
+        {
+          "@id": "dtmi:simpleModel:simplesample:sendTextMessage;1",
+          "@type": "Command",
+          "commandType": "synchronous",
+          "comment": "This is a direct Method",
+          "description": {
+            "en": "This is a direct Method"
+          },
+          "displayName": {
+            "en": "Send Text Message"
+          },
+          "name": "sendTextMessage",
+          "request": {
+            "@type": "CommandPayload",
+            "displayName": {
+              "en": "Message"
+            },
+            "name": "message",
+            "schema": "string"
+          },
+          "response": {
+            "@type": "CommandPayload",
+            "displayName": {
+              "en": "Message Read"
+            },
+            "name": "messageRead",
+            "schema": "boolean"
+          }
+        },
+        {
+          "@id": "dtmi:simpleModel:simplesample:startVacuumCleaner;1",
+          "@type": "Command",
+          "durable": true,
+          "comment": "This is a cloud to device message",
+          "description": {
+            "en": "This is a cloud to device message"
+          },
+          "displayName": {
+            "en": "Start Vacuum cleaner"
+          },
+          "name": "startVacuumCleaner",
+          "request": {
+            "@type": "CommandPayload",
+            "displayName": {
+              "en": "Time to start"
+            },
+            "name": "timeToStart",
+            "schema": "time"
+          }
+        }
+      ],
+      "displayName": {
+        "en": "simple_sample"
+      },
+      "@context": [
+        "dtmi:iotcentral:context;2",
+        "dtmi:dtdl:context;2"
+      ]
+    }
+  ]
