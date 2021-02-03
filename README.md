@@ -40,7 +40,7 @@ Listening at http//localhost:8080
 
 Open your browser of choice and go to the URL http//localhost:8080.  You should see the following in you browser:
 
-![Initial browser screen](https://github.com/iot-for-all/iot-central-web-mqtt-device/raw/master/assets/initialscreen.png "Initial browser screen")
+![Initial browser screen](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/initialscreen.png "Initial browser screen")
 
 
 ## Hosting on Azure
