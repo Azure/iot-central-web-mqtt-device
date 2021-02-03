@@ -1,0 +1,10 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "Page Request": {
+            "matchCondition": {
+                "route": "/{*page}"
+            },
+            "backendUri": "https://localhost/api/GetPage?file={page}"
+        }
+    }

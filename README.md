@@ -44,5 +44,9 @@ Open your browser of choice and go to the URL http//localhost:8080.  You should 
 
 
 ## Hosting on Azure
- 
+
+The code can obviously be hosted on any web service but in my case I chose to host using an [Azure function](https://azure.microsoft.com/en-us/services/functions/?&ef_id=CjwKCAiAsOmABhAwEiwAEBR0ZmNO6WIwjimRlpY2W-N4U_G99qJHALIQa-hykDyFhzNSz6bJl3x8nRoCVcYQAvD_BwE:G:s&OCID=AID2100131_SEM_CjwKCAiAsOmABhAwEiwAEBR0ZmNO6WIwjimRlpY2W-N4U_G99qJHALIQa-hykDyFhzNSz6bJl3x8nRoCVcYQAvD_BwE:G:s&gclid=CjwKCAiAsOmABhAwEiwAEBR0ZmNO6WIwjimRlpY2W-N4U_G99qJHALIQa-hykDyFhzNSz6bJl3x8nRoCVcYQAvD_BwE) as it is a cost effective way to host infrequently accessed static web pages.
+
+I used [this blog post](https://www.wintellect.com/host-website-azure-functions-node-js-part-1/) to setup my Azure function.  The code needed for the Azure Function can be found in the file [azure-function/index.js]().  
+
 ## Running the sample
