@@ -56,4 +56,19 @@ You will need to copy the contents of the content directory up to your Azure Fun
 ![Initial browser screen](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/initialscreen.png "Initial browser screen")
 
 
-## Running the sample
+## Running your device in the browser
+
+To run the device you are obviously going to need an Azure IoT Central application.  You can find instructions on getting started with Azure IoT Central [here](https://docs.microsoft.com/en-us/azure/iot-central/core/quick-deploy-iot-central#:~:text=the%20recommend%20path.-,Create%20an%20application,using%20a%20Custom%20apps%20template.).  Once you have an Azure IoT Central application you need to import in the device model used by this device.  The device model can be obtained either from the browser by clicking the link in the first page or by grabbing it from the GitHub repository [here](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/content/simple_device_model.json).
+
+You can import in the model by looking at [this information](https://docs.microsoft.com/en-us/azure/iot-central/core/concepts-device-templates).  You can also create a [view](https://docs.microsoft.com/en-us/azure/iot-central/core/concepts-device-templates#views) for the device twin properties so you can send the writable property "setTemp" to the device.  
+
+Once you have an Azure IoT Central application and have imported and published the device template you are ready to connect the device.  First thing we need to do is provide information so your device knows where to connect.  You are going to need to fill in the Scope Identity and Group SAS Token.  These can be obtained from the IoT Central application in the Administrator page under the Device connection tab.  
+
+The Scope Identity can be obtained here:
+
+![Getting the Scope Identity](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/scopeid.png "Getting the Scope Identity")
+
+The Group SAS Token can be obtained here:
+
+![Getting the Group SAS Token](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/saskey.png "Getting the Group SAS Token")
+
