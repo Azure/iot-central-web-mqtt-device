@@ -82,3 +82,8 @@ Now click the "Start Sending Telemetry" button and telemetry and reported proper
 
 ![Telemetry flowing to IoT Central](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/telemetryflowing.png "Telemetry flowing to IoT Central")
 
+In the IoT Central you should be seeing data arrive in the raw data view and if you have set up a view of telemetry you will see a graph of the data:
+
+![Raw telemetry in IoT Central](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/rawtelemetryincentral.png "Raw telemetry in IoT Central")
+
+![Telemetry in IoT Central](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/telemetryincentral.png "Telemetry in IoT Central")
