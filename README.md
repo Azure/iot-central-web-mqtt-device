@@ -44,6 +44,7 @@ Open your browser of choice and go to the URL http//localhost:8080.  You should 
 
 ![Initial browser screen](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/initialscreen.png "Initial browser screen")
 
+Enjoy the retro 2010 web page look :-)
 
 ## Hosting on Azure
 
@@ -54,6 +55,8 @@ I used [this blog post](https://www.wintellect.com/host-website-azure-functions-
 You will need to copy the contents of the content directory up to your Azure Function location and also install the needed npm package mime-types.  All this is explained in the blog post.  Once you have followed the insdtructions you should be able to browse to your azure functions URL with https://<your-function-name>.azurewebsites.net/device.html and you should see the following in your browser:
 
 ![Initial browser screen](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/initialscreen.png "Initial browser screen")
+
+Enjoy the retro 2010 web page look :-)
 
 
 ## Running your device in the browser
@@ -105,3 +108,6 @@ Finally the complete device twin can be pulled from IoT Central by clicking the 
 
 ![Full device twin from IoT Central on device](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/fulltwin.png "Full device twin from IoT Central on device")
 
+## Features needed to be added
+
+Right now there is no support for X.509 certificate authentication of the device in the codebase.  I'll try and get this added in the near future.
