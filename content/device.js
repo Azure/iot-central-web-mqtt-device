@@ -115,7 +115,7 @@ const createApp = () => {
                 let reported_payload = {}
                 reported_payload[keyName] = {"value": patchJSON[keyName], "ac":status,"ad":statusMsg,"av":patchJSON['$version']}
                 await client.updateTwin(JSON.stringify(reported_payload))
-                this.writeToConsole("Desired property patch acknowledged: " + "<pre>" + this.syntaxHighlight(patch) + "</pre>", "cyan")
+                this.writeToConsole("Desired property patch acknowledged: " + "<pre>" + this.syntaxHighlight(reported_payload) + "</pre>", "cyan")
             },
 
             async processDirectMethods(method, payload, rid) {
