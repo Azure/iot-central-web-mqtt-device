@@ -21,4 +21,4 @@ http.createServer(function (req, res) {
         res.end();
     }
 }).listen(8080);
-console.log('Listening at http//localhost:8080');
+console.log('Listening at http//:localhost:8080');
