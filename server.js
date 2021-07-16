@@ -3,6 +3,9 @@ http = require('http');
 var mime = require('mime-types')
 
 http.createServer(function (req, res) {
+    if (req.url == '/') {
+        req.url = 'device.html';
+    }
     if (fs.existsSync(__dirname + '/content/' +  req.url)) {
         fs.readFile(__dirname + '/content/' +  req.url, function (err,data) {
             if (err) {
@@ -10,7 +13,7 @@ http.createServer(function (req, res) {
                 res.end(JSON.stringify(err));
                 return;
             }
-            var contentType = mime.lookup(req.url) 
+            var contentType = mime.lookup(req.url);
             var headers = {};
             res.setHeader('content-type', contentType);
             res.writeHead(200);
