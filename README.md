@@ -35,12 +35,12 @@ The following should be seen after running the last command
 > webmqtt@1.0.0 start D:\github\iot-central-web-mqtt-device
 > node server.js
 
-Listening at http//localhost:8080
+Listening at http://localhost:8080
 ```
 
 If you see an error check to see if the port 8080 is already in use on your machine and if it is feel free to change the port to a free one by changing the code in server.js on line 23.
 
-Open your browser of choice and go to the URL http//localhost:8080/device.html.  You should see the following in you browser:
+Open your browser of choice and go to the URL http://localhost:8080/device.html.  You should see the following in you browser:
 
 ![Initial browser screen](https://github.com/iot-for-all/iot-central-web-mqtt-device/blob/main/assets/initialscreen.png "Initial browser screen")
 
