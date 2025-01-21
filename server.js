@@ -1,13 +1,16 @@
-var fs = require('fs'),
-http = require('http');
-var mime = require('mime-types')
+var fs = require('fs');
+var http = require('http');
+var mime = require('mime-types');
+var path = require('path');
 
 http.createServer(function (req, res) {
     if (req.url == '/') {
         req.url = 'device.html';
     }
-    if (fs.existsSync(__dirname + '/content/' +  req.url)) {
-        fs.readFile(__dirname + '/content/' +  req.url, function (err,data) {
+    let filePath = path.join(__dirname, 'content', req.url);
+    filePath = fs.realpathSync(filePath);
+    if (fs.existsSync(filePath)) {
+        fs.readFile(filePath, function (err,data) {
             if (err) {
                 res.writeHead(404);
                 res.end(JSON.stringify(err));
